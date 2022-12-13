@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function mouseOver()
+        {
+            document.getElementById('h').style.color='red';
+        }
+         function mouseOut()
+        {
+            document.getElementById('h').style.color='purple';
+        }
+        function perfect()
+        {
+            var i,j,num,sum=0;
+            num=document.getElementById("t").value;
+            for(i=0;i<num;i++)
+            {
+                if(num%i==0)
+                {
+                    sum=sum+i;
+                }
+            }
+            if(sum==num)
+            {
+               alert("perfect number")
+            }
+            else{
+               alert("not a perfect number")
+            }
+        }
+        </script>
+</head>
+<body>
+    <form>
+        <h1 id="h" onmouseover="mouseOver()" onmouseout="mouseOut()">Chceking whether the number is perfect or not</h1><br>
+        Enter any number<input type="text" id="t"/><br><br>
+        <input type="button" value="check" onclick="perfect()"/><br><br>
+        <span id="s"></span>
+    </form>
+    
+</body>
+</html>
